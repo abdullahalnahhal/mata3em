@@ -23,6 +23,9 @@ return[
   'Make Bar Code' => 'عمل بار كود',
   'START TYPING...' => 'ابدأ الكتابة',
   'Search' => 'بحث',
+  'Languages' => 'اللغة',
+  'Arabic' => 'اللغة العربية',
+  'English' => 'اللغة اﻹنجليزية',
 ];
 
 ?>

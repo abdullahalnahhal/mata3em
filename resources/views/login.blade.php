@@ -9,17 +9,10 @@
 
   </head>
 <body class="login-page">
+    <div  class="login-box text-center">
+        <img src="{{asset('img/left-logo.png')}}" class="img-fluid">
+    </div>
     <div class="login-box">
-        <div class="logo">
-            <a href="{{lRoute("index")}}">
-                <img src="{{asset('new/en/images/logo-en.png')}}" class="col-xs-10" alt="Nice One Website">
-            </a>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
         <div class="card">
             <div class="body">
                 <form id="sign_in" method="POST" action="{{route('login.submit')}}" autocomplete="false">
