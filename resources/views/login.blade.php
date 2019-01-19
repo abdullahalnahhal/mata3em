@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       @include('layout.head')
-      <title>@yield('title')</title>
+      <title>@yield('title', trans('settings.Login'))</title>
 
   </head>
 <body class="login-page">

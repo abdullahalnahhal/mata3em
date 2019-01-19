@@ -46,6 +46,24 @@
             </div>
         </div>
      </div>
+     <div class="col-sm-3">
+       <div class="form-group form-float ">
+           <div class="form-line">
+               <br>
+               <input type="number" name='font_size' class="form-control" step='0.00001' value='{{$settings['font_size']??0}}'>
+               <label class="form-label">@lang('settings.Font Size')</label>
+           </div>
+       </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group form-float ">
+          <div class="form-line">
+              <br>
+              <input type="number" name='borders_size' class="form-control" step='0.00001' value='{{$settings['borders_size']??0}}'>
+              <label class="form-label">@lang('settings.Borders Size')</label>
+          </div>
+      </div>
+   </div>
      <div class="col-sm-2">
          <br>
          <br>

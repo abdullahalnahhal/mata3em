@@ -20,6 +20,8 @@ return[
   'Login' => 'تسجيل دخول',
   'Sign in to start your session' => 'يجب تسجيل الدخول أولا للبدء',
   'Sign Out' => 'تسجيل خروج',
+  'Font Size' => 'حجم الخط',
+  'Borders Size' => 'حجم الإطارات',
 ];
 
 ?>

@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Carbon;
 
-class UsersTableSeeder extends Seeder
+class ClientsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,12 +12,13 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('clients')->insert([
             [
               'id'=>1,
-              'name'=>'Admin',
-              'email' => 'admin',
-              'password' => Hash::make('admin'),
+              'name'=>'مباشر',
+              'tel1' => '000000000',
+              'tel2' => "000000000",
+              'address' =>"كاشير",
               'created_at' => Carbon::now()->toDateTimeString(),
             ],
         ]);
