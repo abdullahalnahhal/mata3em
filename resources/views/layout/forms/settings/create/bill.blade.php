@@ -1,4 +1,4 @@
-<form action="{{route('settings.bill.new')}}" method="post" accept-charset="utf-8" autocomplete="off">
+<form action="{{route('settings.bill.new')}}" method="post" accept-charset="utf-8" autocomplete="off" enctype="multipart/form-data">
     @csrf
     <div class="row clearfix">
       <div class="col-sm-3">
@@ -55,6 +55,24 @@
            </div>
        </div>
     </div>
+    <div class="col-sm-3">
+      <div class="form-group form-float ">
+          <div class="form-line">
+              <br>
+              <input type="text" name='welcome_word' class="form-control"  value='{{$settings['welcome_word']??''}}'>
+              <label class="form-label">@lang('settings.Welcome word')</label>
+          </div>
+      </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="form-group form-float ">
+         <div class="form-line">
+             <br>
+             <input type="file" name='logo' class="form-control">
+             <label class="form-label">@lang('settings.Logo')</label>
+         </div>
+     </div>
+  </div>
     <div class="col-sm-3">
       <div class="form-group form-float ">
           <div class="form-line">

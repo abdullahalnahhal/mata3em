@@ -37,7 +37,13 @@ class SettingsController  extends Main
 		public function billUpdate(Request $request)
     {
 			$settings = Settings::first();
-			$settings->printing = json_encode($request->all());
+			if ($request->file('logo')) {
+            $path = $request->file('logo')->store('public');
+      }
+			$parameters = $request->all();
+			$parameters['logo'] = $path;
+			unset($parameters['_token']);
+			$settings->printing = json_encode($parameters);
 			if($settings->save()){
 					return redirect()->route('settings.bill.index')->with('updated','settings.Settings Has Been Updated ...!');
 			}

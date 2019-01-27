@@ -1,14 +1,22 @@
+@if(isset($setting['print']) && isset($setting['print']['logo']))
 <div class='row clearfix'>
-  <div class='col-xs-6 text-{{revFull()}} pull-{{revFull()}}'>
+  <div class='col-xs-12 text-center' >
+    <img src="{{asset("storage/".basename($setting['print']['logo']))}}" alt="" class="img-rounded" style='height:10rem'>
+  </div>
+</div>
+@endif
+<div class='row clearfix'>
+  <div class='col-xs-12 text-center pull-{{revFull()}}'>
     <h5>{{$order->number}}</h5>
   </div>
-  <div class='col-xs-6 text-{{dirFull()}} pull-{{dirFull()}}' dir='{{revDir()}}'>
-    <div class='col-xs-2'> : @lang('orders.Register Time')</div>
-    <div class='col-xs-10'>{{$order->register_date." ".$order->register_time }}</div>
-    <br>
-    <div class='col-xs-2'> : @lang('orders.Delivery Time')</div>
-    <div class='col-xs-10'>{{Illuminate\Support\Carbon::now() }}</div>
-  </div>
+</div>
+<div class='row clearfix'>
+    <div class='col-xs-12 text-center'>
+        <div class='col-md-8'>{{$order->register_date." ".$order->register_time }}</div>
+    </div>
+    <div class='col-xs-12 text-center'>
+      <div class='col-md-8'>{{Illuminate\Support\Carbon::now() }}</div>
+    </div>
 </div>
 @if(isset($setting['general']) && isset($setting['general']['name']))
 <div class='row clearfix'>
@@ -103,3 +111,10 @@
     </tbody>
   </table>
 </div>
+@if(isset($setting['print']) && isset($setting['print']['welcome_word']))
+<div class='row clearfix'>
+  <div class='col-xs-12 font-bold text-center'>
+      {{$setting['print']['welcome_word']}}
+  </div>
+</div>
+@endif

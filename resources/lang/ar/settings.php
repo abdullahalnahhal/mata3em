@@ -22,6 +22,8 @@ return[
   'Sign Out' => 'تسجيل خروج',
   'Font Size' => 'حجم الخط',
   'Borders Size' => 'حجم الإطارات',
+  'Welcome word' => 'كلمة الترحيب',
+  'Logo' => 'اللوجو',
 ];
 
 ?>
