@@ -145,7 +145,9 @@ class OrdersController  extends Main
 			$client = Clients::where('tel1', '=', $request->client_phone)
 				->orWhere('tel2', '=', $request->client_phone)
 				->first();
-			$orders = $orders->where('client_id', '=', $client->id);
+				if ($client || $client->count()) {
+					$orders = $orders->where('client_id', '=', $client->id);
+				}
 		}
 		if ($request->number) {
 			$orders = $orders->where('number', '=', $request->number);

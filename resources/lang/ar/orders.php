@@ -27,6 +27,12 @@ return[
   'Register To' => 'تاريخ التسجيل إلى',
   'Deliver From' => 'تاريخ التسليم من',
   'Deliver To' => 'تاريخ التسليم إلى',
+  'Register Time' => 'وقت التسجيل',
+  'Price' => 'السعر',
+  'Total' => 'اﻹجمالي',
+  'Bill Total' => 'إجمالي الفاتورة',
+  'Delivery Service' => 'خدمة الديلفيري',
+  'Taxes' => 'الضرائب',
 ];
 
 ?>

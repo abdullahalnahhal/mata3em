@@ -24,8 +24,8 @@ class ClientsController  extends Controller
         }
         $order->status_id = 1;
         $order->client_id = $client->id;
-        $order->register_date = Carbon::today()->format('Y-m-d');
-        $order->register_time = Carbon::today()->format('H:i:s');
+        $order->register_date = Carbon::now()->format('Y-m-d');
+        $order->register_time = Carbon::now()->format('H:i:s');
         $order->delivery_date = $request->delivery_date;
         $order->delivery_time = $request->delivery_time;
         if ($order->save()) {
