@@ -83,6 +83,7 @@
     </table>
 </div>
 @push('modals')
+@if($active == 'Orders')
 <div class="modal fade in" id="search" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -147,22 +148,8 @@
                         </div>
                     </div>
                     <div class='row'>
-                        <!-- <div class='col-xs-6' >
-                            <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input type="text" name='deliver_from' id='deliver_from' class="form-control datepicker" autocomplete="false">
-                                    <label class="form-label">@lang('orders.Deliver From')</label>
-                                </div>
-                            </div>
-                        </div> -->
                         <div class='col-xs-6' >
                             @include('layout.dropdown.orders.orders-status')
-                            <!-- <div class="form-group form-float">
-                                <div class="form-line">
-                                    <input type="text" name='deliver_to' id='deliver_to' class="form-control datepicker" autocomplete="false">
-                                    <label class="form-label">@lang('orders.Deliver To')</label>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </form>
@@ -174,6 +161,80 @@
         </div>
     </div>
 </div>
+@elseIf($active == 'Delivered Orders')
+<div class="modal fade in" id="search" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center" id="defaultModalLabel">@lang('orders.Search Order')</h4>
+            </div>
+            <div class="modal-body">
+                <form method='post' id='search-form' action='' autocomplete="false">
+                    @csrf
+                    <div class='row'>
+                        <div class='col-xs-6' >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="number" name='number' class="form-control" autocomplete="false">
+                                    <label class="form-label">@lang('orders.Order Number')</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-xs-6' >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name='client_phone' class="form-control" autocomplete="false">
+                                    <label class="form-label">@lang('orders.Client Phone')</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-6' >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name='register_from' id='register_from' class="form-control datepicker" autocomplete="false">
+                                    <label class="form-label">@lang('orders.Register From')</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-xs-6' >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name='register_to' id='register_to' class="form-control datepicker" autocomplete="false">
+                                    <label class="form-label">@lang('orders.Register To')</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-6' >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name='deliver_from' id='deliver_from' class="form-control datepicker" autocomplete="false">
+                                    <label class="form-label">@lang('orders.Deliver From')</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-xs-6' >
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" name='deliver_to' id='deliver_to' class="form-control datepicker" autocomplete="false">
+                                    <label class="form-label">@lang('orders.Deliver To')</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-link waves-effect command"  command='formSubmit' form='search-form'>@lang('common.Search')</button>
+              <button href='javascript:void(0)' class="btn btn-link waves-effect" data-dismiss="modal">@lang('common.Cancel')</button>
+            </div>
+        </div>
+    </div>
+</div>
+@endIf
 @endpush
 @push('js')
 <!-- Moment Plugin Js -->

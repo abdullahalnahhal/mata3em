@@ -259,6 +259,9 @@ th {
   .table-bordered td {
     border: 1px solid #ddd !important;
   }
+  table,tr,th,td,thead,tfoot,pre{
+      border-color: black!important;
+  }
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -6756,5 +6759,23 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+@media print {
+    table,tr,th,td,thead,tfoot,pre{
+        border-color: black solid!important;
+    }
+    table,tr,th,td,thead,tfoot,pre{
+        border-color: black!important;
+    }
+    .table-bordered{
+        border-top:1px solid #000!important;
+        border:1px solid #000!important;
+    }
+    .table-bordered tbody tr td, .table-bordered tbody tr th{
+        border: 1px solid #000!important;
+    }
+    .table-bordered thead tr th{
+            border: 1px solid #000!important;
+    }
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -14,6 +14,8 @@ Route::get('{id}/print','OrdersController@print')->where(['id' => '[0-9]+'])->na
 Route::get('{id}/cook','OrdersController@cook')->where(['id' => '[0-9]+'])->name('cook');
 Route::get('{id}/deliver','OrdersController@deliver')->where(['id' => '[0-9]+'])->name('deliver');
 Route::get('/delivered','OrdersController@delivered')->name('delivered');
+Route::post('/delivered','OrdersController@deliveredFilter')->name('delivered-filter');
+
 Route::get('{id}/undeliver','OrdersController@undeliver')->where(['id' => '[0-9]+'])->name('undeliver');
 Route::get('/kitchen','OrdersController@kitchen')->name('kitchen');
 ?>

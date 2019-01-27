@@ -2,7 +2,7 @@
     <table class="table table-bordered table-striped table-hover js-basic-example-no-pagination dataTable">
         <thead>
             <tr>
-                <th>#</th>
+                <th>@lang('common.#')</th>
                 <th>@lang('accounts.Title')</th>
                 <th>@lang('accounts.Amount')</th>
                 <th>@lang('common.Actions')</th>
@@ -10,7 +10,7 @@
         </thead>
         <tfoot>
             <tr>
-              <th>#</th>
+              <th>@lang('common.#')</th>
               <th>@lang('accounts.Title')</th>
               <th>@lang('accounts.Amount')</th>
               <th>@lang('common.Actions')</th>

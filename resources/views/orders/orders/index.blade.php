@@ -43,6 +43,18 @@
                       <span>@lang('common.Search')</span>
                   </button>
                 </span>
+                @elseIf($active == 'Delivered Orders')
+                <sapn class='pull-{{revFull()}}'>
+                  <a href='{{route("orders.orders.new")}}' class="btn btn-success waves-effect " data-toggle="tooltip" data-placement="top" data-original-title="@lang('menue.Create New Category')">
+                      <i class="material-icons">add</i>
+                      <span>@lang('common.New')</span>
+                  </a>
+
+                  <button class="btn bg-light-blue waves-effect command" command='modal' modal='search'  info='{"action":"{{route('orders.orders.delivered-filter')}}"}' data-toggle="tooltip" data-placement="top" data-original-title="@lang('common.Search')">
+                      <i class="material-icons">search</i>
+                      <span>@lang('common.Search')</span>
+                  </button>
+                </span>
                 @endif
             </div>
             <div class="body">

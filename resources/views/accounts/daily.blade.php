@@ -16,6 +16,13 @@
     <li class="active"><i class="material-icons">date_range</i> @lang('sidebar.Accounts By Duration')</li>
     @endif
 </ol>
+<a class="btn bg-purple waves-effect" href='{{route('accounts.print')}}'>
+    <i class="material-icons">print</i>
+    <span>@lang('common.Print')</span>
+</a>
+<br>
+<br>
+
 @if($active == 'Accounts By Duration' )
 <div class="row clearfix">
   <div class="col-xs-12">

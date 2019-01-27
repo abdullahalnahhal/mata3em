@@ -2,7 +2,7 @@
     <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
-                <th>#</th>
+                <th>@lang('common.#')</th>
                 <th>@lang('accounts.Title')</th>
                 <th>@lang('accounts.Price')</th>
                 <th>@lang('accounts.Quantity')</th>
@@ -11,7 +11,7 @@
         </thead>
         <tfoot>
             <tr>
-              <th>#</th>
+              <th>@lang('common.#')</th>
               <th>@lang('accounts.Title')</th>
               <th>@lang('accounts.Price')</th>
               <th>@lang('accounts.Quantity')</th>
