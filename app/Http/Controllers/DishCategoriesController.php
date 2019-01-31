@@ -24,6 +24,14 @@ class DishCategoriesController  extends Main
         'action'=>'New',
       ]);
     }
+		public function newDish($id)
+		{
+			return view('menue.dishes.form',[
+        'active'=>'Dishes',
+        'action'=>'New Dish',
+				'cat_id' => $id,
+      ]);
+		}
 		public function create (DishCategoriesRequest $request)
 		{
 			$category = new DishCategories;

@@ -14,7 +14,17 @@
             <p>
                 <b>@lang('menue.Category')</b>
             </p>
-            @include('layout.dropdown.menue.dish-categories')
+            <input type='hidden' name='dish_category_id' value='{{$cat_id}}'>
+            @if($action == 'New Dish')
+                @include('layout.dropdown.menue.dish-categories',[
+                  'selected_id' => $cat_id,
+                  'extensions'=>[
+                    'disabled' => '',
+                  ]
+                ])
+            @else
+                @include('layout.dropdown.menue.dish-categories')
+            @endif
         </div>
         <div class="col-md-4">
             <p>

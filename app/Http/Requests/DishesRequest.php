@@ -40,7 +40,7 @@ class DishesRequest extends FormRequest
           'name.max' => 'menue.Dish Name Must be filled',
           'name.min' => 'menue.Dish Name Must be filled',
 
-          'dish_category_id.required' => 'menue.Category Must be Selected',
+          'dish_category_id.required' => 'menue.Category Must be Selected Category is Required',
           'dish_category_id.numeric' => 'menue.Category Must be Selected',
           'dish_category_id.exists' => 'menue.Category Must be Selected',
 

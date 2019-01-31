@@ -15,7 +15,7 @@
         <div class="card">
             <div class="header">
                 <h2 style="display: inline-block;">
-                    @if($action == 'New')
+                    @if($action == 'New' || $action == 'New Dish')
                         @lang('menue.Create New Dish')
                     @elseif($action == 'Edit')
                         @lang('menue.Update Dish')
@@ -23,7 +23,7 @@
                 </h2>
             </div>
             <div class="body">
-                @if($action == 'New')
+                @if($action == 'New' || $action == 'New Dish')
                     @include('layout.forms.menue.create.dishes')
                 @elseif($action == 'Edit')
                     @include('layout.forms.menue.update.dishes')

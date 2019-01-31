@@ -41,7 +41,7 @@ class DishesController  extends Main
 					if (!$this->addDishAmount($dish, $request)) {
 							return back()->withErrors('common.Sorry But there Was an issue in saving Data please try again');
 					}
-		      return redirect()->route('menue.dishes.index', ['locale'=>cLang()])->with('created','menue.Category Has Been Created ...!');
+		      return redirect()->route('menue.dish-categories.view', ['id'=>$request->dish_category_id])->with('created','menue.Category Has Been Created ...!');
 		  }
 		  return back()->withErrors('common.Sorry But there Was an issue in saving Data please try again');
 		}

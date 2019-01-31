@@ -16,12 +16,18 @@
                 <h2 style="display: inline-block;">
                     {{$category->name}}
                 </h2>
-                <a href="{{route('menue.dish-categories.delete', ['id' => $category->id])}}" class="btn bg-red waves-effect pull-{{revFull()}}"  data-toggle="tooltip" data-placement="top" data-original-title="@lang('common.Delete')">
-                    <i class="material-icons">delete</i>
-                </a>
-                <a href="{{route('menue.dish-categories.edit', ['id' => $category->id])}}" class="btn bg-blue waves-effect pull-{{revFull()}}"  data-toggle="tooltip" data-placement="top" data-original-title="@lang('common.Edit')">
-                    <i class="material-icons">edit</i>
-                </a>
+                <span class='pull-{{revFull()}}'>
+                  <a href="{{route('menue.dish-categories.edit', ['id' => $category->id])}}" class="btn bg-blue waves-effect"  data-toggle="tooltip" data-placement="top" data-original-title="@lang('common.Edit')">
+                      <i class="material-icons">edit</i>
+                  </a>
+                  <a href="{{route('menue.dish-categories.new-dish', ['id' => $category->id])}}" class="btn bg-orange waves-effect"  data-toggle="tooltip" data-placement="top" data-original-title="@lang('common.Add New Dish')">
+                      <i class="material-icons">add</i>
+                  </a>
+                  <a href="{{route('menue.dish-categories.delete', ['id' => $category->id])}}" class="btn bg-red waves-effect"  data-toggle="tooltip" data-placement="top" data-original-title="@lang('common.Delete')">
+                      <i class="material-icons">delete</i>
+                  </a>
+                </span>
+
             </div>
             <div class="body">
                <div class="row clearfix">
