@@ -240,6 +240,20 @@ class OrdersController  extends Main
 		if ($request->deliver_to) {
 			$orders = $orders->where('delivery_date', '<=', $request->deliver_to);
 		}
+
+		if ($request->register_time_from) {
+			$orders = $orders->where('register_time', '>=', $request->register_time_from);
+		}
+		if ($request->register_time_to) {
+			$orders = $orders->where('register_time', '<=', $request->register_time_to);
+		}
+		if ($request->delivery_time_from) {
+			$orders = $orders->where('delivery_time', '>=', $request->delivery_time_from);
+		}
+		if ($request->delivery_time_to) {
+			$orders = $orders->where('delivery_time', '<=', $request->delivery_time_to);
+		}
+
 		if ($request->order_status_id) {
 			$orders = $orders->where('status_id', '<=', $request->order_status_id);
 		}

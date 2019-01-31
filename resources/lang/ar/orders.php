@@ -33,6 +33,10 @@ return[
   'Bill Total' => 'إجمالي الفاتورة',
   'Delivery Service' => 'خدمة الديلفيري',
   'Taxes' => 'الضرائب',
+  'Register Time From' => 'وقت التسجيل من',
+  'Register Time To' => 'وقت التسجيل إلى',
+  'Deliver Time From' => 'وقت التسليم من',
+  'Deliver Time To' => 'وقت التسليم إلى',
 ];
 
 ?>
