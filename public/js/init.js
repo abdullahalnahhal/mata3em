@@ -258,6 +258,22 @@ Command = function ()
 					})
 			});
 	}
+	this.revEnable = function(element)
+	{
+		is_checked = element.prop('checked');
+		elements = element.attr('elements');
+		if (!is_checked) {
+			elements = elements.split(',');
+			for (i = 0; i < elements.length; i++) {
+				$('#'+elements[i]).prop('disabled', false);
+			}
+		}else{
+			elements = elements.split(',');
+			for (i = 0; i < elements.length; i++) {
+				$('#'+elements[i]).prop('disabled', true);
+			}
+		}
+	}
 }
 
 

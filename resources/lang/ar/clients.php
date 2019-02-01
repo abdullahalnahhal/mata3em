@@ -12,6 +12,7 @@ return[
   'Delivery Time' => 'وقت التسليم',
   'Create New Order' => 'إنشاء طلب جديد',
   'Update Order' => 'تعديل على الطلب',
+  'Paid Amount' => 'المبلغ المدفوع',
 ];
 
 ?>

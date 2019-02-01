@@ -1,7 +1,7 @@
 <form action="{{route('clients.create-order',['id'=>$client->id])}}" method="post" accept-charset="utf-8" autocomplete="off">
   @csrf
   <div class='col-xs-12'>
-      <div class="col-sm-4">
+      <div class="col-sm-3">
            <div class="form-group form-float ">
                <div class="form-line">
                    <br>
@@ -10,7 +10,7 @@
                </div>
            </div>
        </div>
-       <div class="col-sm-4">
+       <div class="col-sm-3">
           <div class="form-group form-float ">
               <div class="form-line">
                   <br>
@@ -29,6 +29,21 @@
           @endif
           <label for="is_delivery"><b>@lang('common.Is Delivery')</b></label>
       </div>
+      <div class="col-sm-2">
+          <br>
+          <br>
+          <input type="checkbox" id="paid" name="paid" value='1' class="filled-in command" command='revEnable' elements='paid_amount' checked>
+          <label for="paid"><b>@lang('common.Paid')</b></label>
+      </div>
+      <div class="col-sm-2">
+         <div class="form-group form-float ">
+             <div class="form-line">
+                 <br>
+                 <input type="number" id='paid_amount' name='paid_amount' class="form-control" required aria-required="true"  value='{{old('paid_amount')??0}}' step='.00001' disabled>
+                 <label class="form-label">@lang('clients.Paid Amount')</label>
+             </div>
+         </div>
+     </div>
   </div>
 
 
